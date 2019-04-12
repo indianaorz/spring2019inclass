@@ -1,0 +1,12 @@
+@media (max-width:600px){
+    
+    .navigation-bar{
+        width:25%;
+        left:-25%;
+    }
+
+    .content{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

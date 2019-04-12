@@ -1,0 +1,61 @@
+@keyframes fade-through-in{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-through-out{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@keyframes button-click{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes rotate-in{
+    0%{
+        opacity:0;
+        transform: rotate(0deg) scale(0);
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+@keyframes rotate-out{
+    0%{
+        opacity:1;
+        transform: rotate(0deg)  scale(1);
+    }
+    100%{
+        opacity:0;
+        transform: rotate(360deg) scale(0);
+    }
+}
+

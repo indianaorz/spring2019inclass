@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Website</title>
+        <link href="styles/animations.css" 
+                rel="stylesheet" 
+                type="text/css">
+        <link href="styles/main.css" 
+            rel="stylesheet" 
+            type="text/css">
+        <link href="styles/main-small.css" 
+            rel="stylesheet" 
+            type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Srisakdi" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+        
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+        <script src="js/javascript.js"></script>
+        
+    </head>
+    <body>
+        <!--App Bar-->
+        <div class="app-bar elevation-2">
+            <div class="app-bar__brand">
+                <i id="menu"
+                    class="fas fa-bars app-bar__icon"></i>
+                <span>Title</span>
+            </div>
+                
+            <div class="app-bar__actions">
+                <i class="fab fa-affiliatetheme app-bar__icon"></i>
+                <i class="fas fa-baby-carriage app-bar__icon"></i>
+                <i class="fas fa-rocket app-bar__icon"></i>
+            </div>
+        </div>
+
+        <div id="navigation-bar" 
+        class="navigation-bar navigation-bar--hidden elevation-2 transition"></div>
+
+
+        <!--Content-->
+        <div id="content"
+            class="content content--no-navigation transition">
+
+            <!--Hero Image-->
+            <div class="hero">
+                <div class="hero__textbook hero__image"></div>
+                <div class="hero__overlay">
+                    <div class="overlay__title">The Textbook Site </div>  
+                </div>
+            </div>
+
+            <img id="image-preview"/>
+            <input id="image-input" onchange="previewFile()" type="file" name="image-selector" accept="image/*">
+
+            <div class="card elevation-2">
+                <div class="card__red">
+                    Top Text
+                </div>
+                <div class="card__blue">
+                    Bottom Text
+                </div>
+            </div>
+
+            <div id = "button-card-transition" 
+                class="elevation-2 transition">
+
+                <i id="icon-switch" 
+                class="fab__icon fas fa-exchange-alt"></i>
+                <i id="icon-anchor" 
+                class="fab__icon fas fa-anchor start-hidden"></i>
+            </div>
+
+            <div class="content__text">
+                <h2>Lorem ipsum</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi porttitor tellus ullamcorper bibendum eu et quam. Fusce non leo ultricies, consequat odio id, hendrerit magna. Maecenas et mi vel tellus convallis suscipit eget sed urna. Aliquam id diam magna. Maecenas neque erat, rutrum vitae mi nec, aliquet elementum purus. Sed condimentum, sem vitae sagittis ornare, nisi mi tempus orci, nec consectetur metus sem vel enim. Maecenas maximus porta erat. Integer vel nisi laoreet, vulputate ipsum et, tristique leo. Aenean commodo felis id convallis suscipit. Vivamus eu varius libero. Morbi ligula enim, dignissim vel libero eu, hendrerit facilisis leo. Vivamus placerat justo at tempor rhoncus. Fusce diam erat, luctus quis lorem ut, vestibulum tempus dui. Vivamus pharetra ipsum a sapien porttitor fringilla.
+                </p>
+    
+                <h5>Lorem ipsum</h5>
+                <p>
+                    Etiam gravida eleifend dapibus. Donec et porttitor ipsum. Nunc nulla sapien, hendrerit ut lacus in, ultricies imperdiet ligula. Nullam ante ligula, condimentum et porta eu, vehicula vel libero. Suspendisse rutrum ullamcorper nibh, non sodales nisl tempus in. Aliquam lobortis augue suscipit, sagittis risus sed, pulvinar mauris. Nunc ac metus eget nunc tincidunt rutrum. Mauris feugiat nec turpis vitae consectetur. Integer venenatis eget dui non vehicula. Aenean dui dolor, cursus mattis dui et, sagittis porttitor velit. Sed faucibus vitae lorem id ultrices. Mauris dapibus ultricies elit sit amet posuere. In diam leo, condimentum id ultricies eu, volutpat id elit.
+                </p>
+                <p>
+                    Etiam gravida eleifend dapibus. Donec et porttitor ipsum. Nunc nulla sapien, hendrerit ut lacus in, ultricies imperdiet ligula. Nullam ante ligula, condimentum et porta eu, vehicula vel libero. Suspendisse rutrum ullamcorper nibh, non sodales nisl tempus in. Aliquam lobortis augue suscipit, sagittis risus sed, pulvinar mauris. Nunc ac metus eget nunc tincidunt rutrum. Mauris feugiat nec turpis vitae consectetur. Integer venenatis eget dui non vehicula. Aenean dui dolor, cursus mattis dui et, sagittis porttitor velit. Sed faucibus vitae lorem id ultrices. Mauris dapibus ultricies elit sit amet posuere. In diam leo, condimentum id ultricies eu, volutpat id elit.
+                </p>
+    
+                
+                <h5>Lorem ipsum</h5>
+                <p>
+                    Curabitur ut convallis enim, ac dictum risus. Morbi ornare tellus diam, cursus viverra leo fringilla nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas a placerat diam. Vestibulum a lectus eu magna porttitor feugiat. Nullam erat neque, tristique in nisi non, sollicitudin sodales leo. Praesent sapien leo, euismod nec dignissim sodales, rhoncus quis orci. Nullam efficitur ipsum ex, quis elementum tellus pharetra a.
+                </p>
+            </div>
+
+            
+            <!--Hero Image-->
+            <div class="hero">
+                <div class="hero__textbook-blue hero__image"></div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
