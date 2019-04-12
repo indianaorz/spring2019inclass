@@ -11,6 +11,9 @@ function previewFile(){
 
     reader.onloadend = function () {
         preview.src = reader.result;
+
+        //Store the image
+        localStorage.setItem("item-preview", file.name);
     }
 
     if (file) {
@@ -24,7 +27,12 @@ previewFile();  //calls the function named previewFile()
 
 $( document ).ready(function() {
 
-
+    //Check to see if image exists in storage
+    var imagePreview = localStorage.getItem("item-preview");
+    if(imagePreview != undefined){
+        
+    }
+    //Render the image
 
 
     console.log("Document is ready");
