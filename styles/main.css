@@ -282,5 +282,7 @@ p{
     width:400px;
 }
 
-
+.transition-background-color{
+    transition: background-color 10s linear;
+}
 

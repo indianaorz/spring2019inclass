@@ -13,7 +13,7 @@ function previewFile(){
         preview.src = reader.result;
 
         //Store the image
-        localStorage.setItem("item-preview", file.name);
+        localStorage.setItem("item-preview", reader.result);
     }
 
     if (file) {
@@ -23,16 +23,38 @@ function previewFile(){
     }
 }
 
-previewFile();  //calls the function named previewFile()
+function changeColors(){
+    //Change the color of every element
+    var allElements = $("*").toArray();
+
+    allElements.forEach(function(element){
+        element.classList.add("transition-background-color");
+        var r = Math.random() * 255;
+        var g = Math.random() * 255;
+        var b = Math.random() * 255;
+        element.style.cssText = "background-color: rgb(" + r + "," + g + "," + b + ");";
+    });
+}
+
 
 $( document ).ready(function() {
+
+    changeColors();
+    setInterval(function(){
+        changeColors();
+    },10000);
+
+
 
     //Check to see if image exists in storage
     var imagePreview = localStorage.getItem("item-preview");
     if(imagePreview != undefined){
-        
+        //Render the image
+        //selects the query named img
+        var preview = document.querySelector('#image-preview'); 
+
+        preview.src = imagePreview;
     }
-    //Render the image
 
 
     console.log("Document is ready");
