@@ -39,12 +39,12 @@ function changeColors(){
 
 $( document ).ready(function() {
 
-    changeColors();
-    setInterval(function(){
-        changeColors();
-    },10000);
+    // changeColors();
+    // setInterval(function(){
+    //     changeColors();
+    // },1000000);
 
-
+    
 
     //Check to see if image exists in storage
     var imagePreview = localStorage.getItem("item-preview");
@@ -61,6 +61,24 @@ $( document ).ready(function() {
     $( "#menu" ).click(function() {
         $("#navigation-bar").toggleClass("navigation-bar--hidden");
         $("#content").toggleClass("content--no-navigation");
+    });
+
+    //Clicking ANY dropdown button
+    $( ".dropdown__button").click(function() {
+        //If we clicked on an open dropdown
+        if($(this).siblings(".dropdown__list").hasClass("hidden") == false)
+        {
+            //Hide it
+            $(this).siblings(".dropdown__list").addClass("hidden");
+        }
+        //Otherwise
+        else{
+            //Hide all of the list items
+            $(".dropdown__list").addClass("hidden");
+    
+            //remove the hidden class from the clicked drop down
+            $(this).siblings(".dropdown__list").removeClass("hidden");
+        }
     });
 
     //When the FAB is clicked
