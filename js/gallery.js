@@ -11,8 +11,11 @@ var images = [
     "images/download (9).jfif"
 ];
 
+var clickedIndex = -1;
 
 $( document ).ready(function() {
+
+
     images.forEach(function(image){
         var wrapper = document.createElement("div");
         wrapper.classList.add("gallery-image-wrapper");
@@ -23,4 +26,51 @@ $( document ).ready(function() {
         newImage.classList.add("gallery-image");
         wrapper.appendChild(newImage);
     });
+
+    //When we click on a gallery image
+    $(".gallery-image").click(function(){
+        //Show the dialog
+        $("#dialog").removeClass("hidden");
+
+        //Show the image we clicked on
+        var clickedImage = $(this).attr('src');
+        $(".image__display").attr('src', clickedImage);
+
+        //Set the clicked index to the index of the image we clicked on
+        clickedIndex = images.indexOf(clickedImage);
+        console.log("Clicked on : " + clickedIndex);
+    });
+
+    //On clicking exit
+    $(".dialog__exit").click(function(){
+        //Remove the dialog
+        $("#dialog").addClass("hidden");
+    });
+
+    //On clicking right
+    $(".dialog__scroll-right").click(function(){
+        //clickedIndex = clickedIndex + 1;
+        clickedIndex += 1;
+        //clickedIndex++;
+
+        if(clickedIndex >= images.length){
+            clickedIndex -= images.length;
+        }
+        //Change the image according to the index
+        $(".image__display").attr('src', images[clickedIndex]);
+    });
+
+    
+    //On clicking left
+    $(".dialog__scroll-left").click(function(){
+        clickedIndex -= 1;
+
+        if(clickedIndex < 0){
+            clickedIndex += images.length;
+        }
+
+        //Change the image according to the index
+        $(".image__display").attr('src', images[clickedIndex]);
+    });
+
 });
