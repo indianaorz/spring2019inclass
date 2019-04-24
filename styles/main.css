@@ -319,9 +319,24 @@ ul{
     width:400px;
 }
 
+#dialog{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+}
+
 #gallery{
     display: flex;
     flex-wrap: wrap;
+}
+
+.dialog-scrim{
+    background-color:black;
+    position:absolute;
+    width:100%;
+    height:100%;
 }
 
 .gallery-image-wrapper{
@@ -341,4 +356,5 @@ ul{
 .transition-background-color{
     transition: background-color 1000s linear;
 }
+
 
