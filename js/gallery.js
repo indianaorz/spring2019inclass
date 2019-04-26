@@ -49,15 +49,22 @@ $( document ).ready(function() {
 
     //On clicking right
     $(".dialog__scroll-right").click(function(){
-        //clickedIndex = clickedIndex + 1;
         clickedIndex += 1;
-        //clickedIndex++;
 
         if(clickedIndex >= images.length){
             clickedIndex -= images.length;
         }
-        //Change the image according to the index
-        $(".image__display").attr('src', images[clickedIndex]);
+
+        $(".image__display").addClass("gallery-click-right");
+        setTimeout(function(){
+            //Change the image according to the index
+            $(".image__display").attr('src', images[clickedIndex]);
+        }, 150);
+
+        //Remove the animation class
+        setTimeout(function(){
+            $(".image__display").removeClass("gallery-click-right");
+        },300);
     });
 
     
@@ -69,8 +76,17 @@ $( document ).ready(function() {
             clickedIndex += images.length;
         }
 
-        //Change the image according to the index
-        $(".image__display").attr('src', images[clickedIndex]);
+
+        $(".image__display").addClass("gallery-click-left");
+        setTimeout(function(){
+            //Change the image according to the index
+            $(".image__display").attr('src', images[clickedIndex]);
+        }, 150);
+
+        //Remove the animation class
+        setTimeout(function(){
+            $(".image__display").removeClass("gallery-click-left");
+        },300);
     });
 
 });

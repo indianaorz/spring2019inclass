@@ -411,6 +411,21 @@ ul{
     height: 125%;
 }
 
+.gallery-click-right{
+    animation-name:gallery-click-right;
+    animation-duration:300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+
+.gallery-click-left{
+    animation-name:gallery-click-left;
+    animation-duration:300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
 .transition-background-color{
     transition: background-color 1000s linear;
 }
