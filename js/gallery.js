@@ -11,6 +11,8 @@ var images = [
     "images/download (9).jfif"
 ];
 
+
+
 var clickedIndex = -1;
 
 $( document ).ready(function() {
@@ -25,6 +27,19 @@ $( document ).ready(function() {
         newImage.src = image;
         newImage.classList.add("gallery-image");
         wrapper.appendChild(newImage);
+    });
+
+    //When the main fab is clicked
+    $("#main-fab").click(function(){
+        $(".secondary-fab").each(function(index){
+            if($(this).css("bottom") == "24px"){
+                $(this).css("z-index", 3 - index);
+                $(this).css("bottom", 24 + (80 * (index + 1)));
+            }
+            else{
+                $(this).css("bottom", 24);
+            }
+        });
     });
 
     //When we click on a gallery image

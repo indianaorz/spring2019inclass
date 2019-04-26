@@ -231,6 +231,23 @@ ul{
     right:24px;
     bottom:24px;
     background-color:#3f50b5;
+    z-index:4;
+}
+
+.fab{
+    width:64px;
+    height:64px;
+    border-radius:100%;
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    background-color:#3f50b5;
+    z-index:4;
+}
+
+
+.secondary-fab{
+   z-index:3;
 }
 
 .fab__icon{
