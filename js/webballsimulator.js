@@ -85,8 +85,16 @@ function Start(){
 
     document.documentElement.addEventListener("mouseup",
     ReleaseBall);
+    
+    document.documentElement.addEventListener("mousedown",
+    ClickAnywhere);
 
     SetBallPosition();
+}
+
+function ClickAnywhere(){
+    mouseVelocity.x = 0;
+    mouseVelocity.y = 0;
 }
 
 function ClickBall(){
@@ -96,9 +104,11 @@ function ClickBall(){
 }
 
 function ReleaseBall(){
-    ball.grabbed = false;
-    ball.velocity.x = mouseVelocity.x;
-    ball.velocity.y = mouseVelocity.y;
+    if(ball.grabbed){
+        ball.grabbed = false;
+        ball.velocity.x = mouseVelocity.x;
+        ball.velocity.y = mouseVelocity.y;
+    }
 }
 
 function SetBallPosition(){
